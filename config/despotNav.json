@@ -1,0 +1,18 @@
+{
+  "name": "navigation_problem",
+  "map": "/home/redwan/catkin_ws/src/PolicySynthesis/config/map-13-3-1.txt",
+  "dependencies": {
+    "runs": 1,
+    "simlen": 120,
+    "depth": 60,
+    "seed": 28358000,
+    "timeout": 2,
+    "noise": 1,
+    "nparticles": 1000,
+    "prune": 0,
+    "solver": "POMCP",
+    "world": "pomdp",
+    "default": false
+
+  }
+}
