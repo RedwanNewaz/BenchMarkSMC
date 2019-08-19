@@ -6,81 +6,88 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2103</width>
-    <height>1455</height>
+    <width>816</width>
+    <height>651</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>130</y>
-     <width>91</width>
-     <height>17</height>
+     <x>10</x>
+     <y>19</y>
+     <width>791</width>
+     <height>621</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Simulation</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>1620</x>
-     <y>120</y>
-     <width>91</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Performance</string>
-   </property>
-  </widget>
-  <widget class="QCustomPlot" name="simulation" native="true">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>160</y>
-     <width>1051</width>
-     <height>991</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QCustomPlot" name="performance" native="true">
-   <property name="geometry">
-    <rect>
-     <x>1159</x>
-     <y>169</y>
-     <width>901</width>
-     <height>741</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPlainTextEdit" name="msgBox">
-   <property name="geometry">
-    <rect>
-     <x>1160</x>
-     <y>960</y>
-     <width>901</width>
-     <height>191</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QProgressBar" name="progressBar">
-   <property name="geometry">
-    <rect>
-     <x>770</x>
-     <y>1230</y>
-     <width>621</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="value">
-    <number>24</number>
-   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Simulation</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Performance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCustomPlot" name="simulation" native="true"/>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCustomPlot" name="performance" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>400</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="msgBox"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

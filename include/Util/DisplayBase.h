@@ -10,6 +10,7 @@
 #include "qcustomplot.h"
 #include "SharedData.h"
 
+static std::once_flag layer_;
 class DisplayBase : public QObject
 {
 Q_OBJECT
@@ -34,6 +35,11 @@ protected:
     void EnvViz(QCPScatterStyle &myScatter) const;
 
     void RewardViz(const QVector<double> &x0, const QVector<double> &y0, const QVector<double> &y1) const;
+
+private:
+    int num_layer_, sample_layer_ ;
+
+
 };
 
 #endif //BENCHMARKSMC_DISPLAYBASE_H

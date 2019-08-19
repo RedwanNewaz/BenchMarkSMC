@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_tag_autogen" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_noisy_laser_tag" />
+      <config projectName="BenchMarkSMC" targetName="QT_DISP_LIBS" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_fvrs" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_laser_tag" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_navigation" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_rock_sample" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_fvrs_autogen" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_noisy_laser_tag_autogen" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_rock_sample_autogen" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_laser_tag_autogen" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_navigation_autogen" />
+      <config projectName="BenchMarkSMC" targetName="QT_DISP_LIBS_autogen" />
+      <config projectName="BenchMarkSMC" targetName="BenchMarkSMC_tag" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b37fee0-1d92-4a10-8b89-87d4a5f95e37" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/base/base_rock_sample.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/base/base_rock_sample.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/fvrs/fvrs.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/fvrs/fvrs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/fvrs/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/rock_sample.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/rock_sample.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake/FindQT.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenchMarkSMC" beforeDir="false" afterPath="$PROJECT_DIR$/BenchMarkSMC" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenchMarkSMC_navigation" beforeDir="false" afterPath="$PROJECT_DIR$/BenchMarkSMC_navigation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/navigation/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/navigation/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/navigation/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/navigation/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/navigation/src/navigation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/navigation/src/navigation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/navigation/src/navigation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/navigation/src/navigation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/rock_sample/base/base_rock_sample.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/rock_sample/base/base_rock_sample.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/rock_sample/rock_sample.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/rock_sample/rock_sample.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/simple_rock_sample/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/simple_rock_sample/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/simple_rock_sample/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/simple_rock_sample/src/simple_rock_sample.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/simple_rock_sample/src/simple_rock_sample.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/tag/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/tag/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/tag/src/tag/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/tag/src/tag/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/tag/src/tag/tag.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/tag/src/tag/tag.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/tag/src/tag/tag.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/tag/src/tag/tag.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Planner/despotPlanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Planner/despotPlanner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/QtEnv/dialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/config/QtEnv/dialog.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Util/DisplayBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/config/Util/DisplayBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Planner/despotPlanner.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Planner/despotPlanner.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/SharedData.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/SharedData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Util/DisplayBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Util/DisplayBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/metric/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/metric/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sim/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/sim/9.png" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5262181">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/Util/DisplayBase.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-362">
+                  <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+                  <folding>
+                    <element signature="e#39#68#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Domain/navigation/src/main.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="347">
+                  <caret line="55" selection-start-line="55" selection-end-line="55" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Domain/tag/src/tag/main.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-150">
+                  <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>simView_</find>
+      <find>EnvViz</find>
+      <find>share</find>
+      <find>removeDirFiles</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/include/Util/DisplayBase.h" />
+        <option value="$PROJECT_DIR$/include/Planner/despotPlanner.h" />
+        <option value="$PROJECT_DIR$/cmake/FindQT.cmake" />
+        <option value="$PROJECT_DIR$/Domain/tag/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Planner/despotPlanner.cpp" />
+        <option value="$PROJECT_DIR$/include/SharedData.h" />
+        <option value="$PROJECT_DIR$/Domain/rock_sample/rock_sample.cpp" />
+        <option value="$PROJECT_DIR$/Domain/navigation/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Domain/rock_sample/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/backup/rock_sample/rock_sample.cpp" />
+        <option value="$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/main.cpp" />
+        <option value="$PROJECT_DIR$/Domain/tag/src/tag/main.cpp" />
+        <option value="$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/rock_sample.h" />
+        <option value="$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/rock_sample.cpp" />
+        <option value="$PROJECT_DIR$/Domain/navigation/src/navigation.cpp" />
+        <option value="$PROJECT_DIR$/Domain/navigation/src/navigation.h" />
+        <option value="$PROJECT_DIR$/Domain/tag/src/tag/tag.cpp" />
+        <option value="$PROJECT_DIR$/Domain/tag/src/tag/tag.h" />
+        <option value="$PROJECT_DIR$/Domain/navigation/src/main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/config/Util/DisplayBase.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1338" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BenchMarkSMC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BenchMarkSMC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BenchMarkSMC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BenchMarkSMC" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BenchMarkSMC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BenchMarkSMC" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BenchMarkSMC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BenchMarkSMC" type="462c0819:PsiDirectoryNode" />
+              <item name="Planner" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Domain" />
+      <recent name="$PROJECT_DIR$/cmake" />
+      <recent name="$PROJECT_DIR$/config/QtEnv" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.BenchMarkSMC_rock_sample">
+    <configuration name="BenchMarkSMC" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="config/despotNav.json" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_fvrs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_fvrs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC_fvrs">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_fvrs_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_fvrs_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_laser_tag" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_laser_tag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC_laser_tag">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_laser_tag_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_laser_tag_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_navigation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_navigation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC_navigation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_navigation_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_navigation_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_noisy_laser_tag" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_noisy_laser_tag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC_noisy_laser_tag">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_noisy_laser_tag_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_noisy_laser_tag_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_rock_sample" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--size 7" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_rock_sample" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC_rock_sample">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_rock_sample_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_rock_sample_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_tag" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_tag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BenchMarkSMC" RUN_TARGET_NAME="BenchMarkSMC_tag">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BenchMarkSMC_tag_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="BenchMarkSMC_tag_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QT_DISP_LIBS" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="QT_DISP_LIBS" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QT_DISP_LIBS_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BenchMarkSMC" TARGET_NAME="QT_DISP_LIBS_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BenchMarkSMC" />
+      <item itemvalue="Application.QT_DISP_LIBS" />
+      <item itemvalue="Application.QT_DISP_LIBS_autogen" />
+      <item itemvalue="Application.BenchMarkSMC_fvrs" />
+      <item itemvalue="Application.BenchMarkSMC_fvrs_autogen" />
+      <item itemvalue="Application.BenchMarkSMC_rock_sample" />
+      <item itemvalue="Application.BenchMarkSMC_rock_sample_autogen" />
+      <item itemvalue="Application.BenchMarkSMC_navigation" />
+      <item itemvalue="Application.BenchMarkSMC_navigation_autogen" />
+      <item itemvalue="Application.BenchMarkSMC_laser_tag" />
+      <item itemvalue="Application.BenchMarkSMC_laser_tag_autogen" />
+      <item itemvalue="Application.BenchMarkSMC_noisy_laser_tag" />
+      <item itemvalue="Application.BenchMarkSMC_noisy_laser_tag_autogen" />
+      <item itemvalue="Application.BenchMarkSMC_tag" />
+      <item itemvalue="Application.BenchMarkSMC_tag_autogen" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b37fee0-1d92-4a10-8b89-87d4a5f95e37" name="Default Changelist" comment="" />
+      <created>1555531792016</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555531792016</updated>
+      <workItem from="1555531794398" duration="5722000" />
+      <workItem from="1555701584680" duration="572000" />
+      <workItem from="1555795010755" duration="598000" />
+      <workItem from="1557170700499" duration="30000" />
+      <workItem from="1566179955966" duration="21009000" />
+      <workItem from="1566238891413" duration="1234000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29165000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="2560" height="1338" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14535345" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32985553" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37078652" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967898" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32744783" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32985553" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="CMake" order="13" weight="0.32985553" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.14416203" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37078652" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39967898" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32744783" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="CMake" order="13" weight="0.32985553" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/QtEnv/dialog2.ui">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/metric/13.png" />
+    <entry file="file://$PROJECT_DIR$/output/metric/31.png" />
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="509" selection-start-line="509" selection-end-line="509" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/src/laser_tag/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/navigation/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/include/qt/QtCore/qthread.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/rock_sample.h" />
+    <entry file="file://$PROJECT_DIR$/example/navigation/src/navigation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4115">
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/tag/src/tag/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/FindQT.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/SharedData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-964">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding>
+            <element signature="e#108#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp" />
+    <entry file="file://$PROJECT_DIR$/include/qcustomplot.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2295" selection-start-line="2295" selection-end-line="2295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/QtEnv/qcustomplot.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="20182" selection-start-line="20182" selection-end-line="20182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Domain/navigation/BenchMarkSMC_navigation_autogen/PWANSV4PDO/moc_DisplayBase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Util/DisplayBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/rock_sample.cpp" />
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/navigation/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/src/base/base_rock_sample.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="802" column="4" selection-start-line="802" selection-start-column="4" selection-end-line="823" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/navigation/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/src/base/base_rock_sample.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/rock_sample/rock_sample.cpp" />
+    <entry file="file://$PROJECT_DIR$/include/Planner/despotPlanner.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/rock_sample.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/navigation/src/navigation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4980">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/navigation/src/navigation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#43#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/src/tag/tag.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="184" column="78" selection-start-line="184" selection-start-column="78" selection-end-line="184" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/src/base/base_tag.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="136" column="14" selection-start-line="136" selection-start-column="14" selection-end-line="136" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/src/base/base_tag.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11595">
+          <caret line="773" column="14" selection-start-line="773" selection-start-column="14" selection-end-line="773" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/rock_sample.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#43#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Planner/despotPlanner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/simple_rock_sample/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="150">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/src/tag/tag.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#29#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/despotNav.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/rock_sample/src/rock_sample/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/navigation/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/tag/src/tag/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/metric/2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/metric/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/sim/15.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/metric/15.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Util/DisplayBase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-362">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+          <folding>
+            <element signature="e#39#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

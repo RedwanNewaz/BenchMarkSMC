@@ -6,7 +6,10 @@
 #include <despot/util/coord.h>
 #include <despot/util/floor.h>
 #include "base/base_tag.h"
-
+#include <unordered_map>
+#include "SharedData.h"
+extern  shared_ptr<SharedData> SHARE;
+static std::once_flag flag_;
 namespace despot {
 
 /* =============================================================================
@@ -33,6 +36,11 @@ public:
 		std::map<OBS_TYPE, double>& obss) const;
 
 	void PrintObs(const State& state, OBS_TYPE obs, std::ostream& out = std::cout) const;
+
+	void PrintState(const State &state, std::ostream &out) const override;
+
+private:
+	shared_ptr<SharedData> share_;
 };
 
 } // namespace despot

@@ -2,8 +2,8 @@
 // Created by redwan on 4/6/19.
 //
 
-#include "include/Util/DisplayBase.h"
-#include <include/qcustomplot.h>
+#include "Util/DisplayBase.h"
+#include <qcustomplot.h>
 
 
 bool removeDirFiles(const QString & dirName)
@@ -26,7 +26,6 @@ shared_ptr<SharedData> SHARE = make_shared<SharedData>();
  * @param simView - simulation view  : robot is blue dot which mission is to sample red dots and leaves on the east
  * @param logView  - performance view: red line for undiscounted and blue area for discounted rewards respectively
  * @param SHARE - Shared class for communicating with planning thread
- * @param MUTE - mutex lock for shared class. It eanbels thread safety- data race.
  */
 
 DisplayBase::DisplayBase(QCustomPlot *simView, QCustomPlot *logView, QProgressBar *progress):simView_(simView),logView_(logView), progress_(progress) {
@@ -95,15 +94,16 @@ void DisplayBase::simulationUpdate() {
     myScatter.setShape(QCPScatterStyle::ssCircle);
     myScatter.setPen(QPen(Qt::white));
     myScatter.setBrush(Qt::blue);
-    myScatter.setSize(50);
+    myScatter.setSize(25);
 
     QVector<double> x0, y0, y1;
     share_->getReward(x0, y0, y1);
     RewardViz(x0, y0, y1);
 
-    RobotViz(myScatter);
-
     EnvViz(myScatter);
+    // depends on hierarchy - robot is denoted by blue dot
+    myScatter.setBrush(Qt::blue);
+    RobotViz(myScatter);
 
     progress_->setValue(share_->count_);
     simView_->replot();
@@ -126,38 +126,64 @@ void DisplayBase::EnvViz(QCPScatterStyle &myScatter) const {
     if(sample_x.empty() && rock_x.empty())
         return;
 
+
+
+    std::call_once(layer_, [&](){
+        int total = sample_x.size() +  rock_x.size();
+        // extra 1 for robot (blue dot)
+        for (int i = 0; i <= total; ++i) {
+            simView_->addGraph();
+        }
+        cout<<"TOTAL "<<total <<endl;
+        const_cast<int&>(num_layer_) = total;
+        const_cast<int&>(sample_layer_) = sample_x.size();
+
+    });
+
     // add unknown rock as red
-    simView_->addGraph();
     myScatter.setBrush(Qt::red);
-    simView_->graph(1)->setScatterStyle(myScatter);
-    simView_->graph(1)->setData(sample_x, sample_y);
 
-    // add known rock as black
-    simView_->addGraph();
+    for (int k = 0; k < sample_x.size(); ++k) {
+        int l = k;
+        simView_->graph(l)->setScatterStyle(myScatter);
+        QVector<double>x,y;
+        x.push_back(sample_x[k]);
+        y.push_back(sample_y[k]);
+        simView_->graph(l)->setData(x, y);
+
+    }
+
+    // add sampled (bad) rock as black
     myScatter.setBrush(Qt::black);
-    simView_->graph(2)->setScatterStyle(myScatter);
-    simView_->graph(2)->setData(rock_x, rock_y);
+    for (int k = 0; k < rock_x.size(); ++k) {
+        int l = min(sample_layer_ + k -1, num_layer_);
+        simView_->graph(l)->setScatterStyle(myScatter);
+        QVector<double>x,y;
+        x.push_back(rock_x[k]);
+        y.push_back(rock_y[k]);
+        simView_->graph(l)->setData(x, y);
 
-
+    }
 
     // give the axes some labels:
     simView_->xAxis->setLabel("x");
     simView_->yAxis->setLabel("y");
     // set axes ranges, so we see all data:
-    int size = share_->mapSize();
-    simView_->xAxis->setRange(0, size);
-    simView_->yAxis->setRange(0, size);
-    simView_->xAxis->ticker()->setTickCount(size);
-    simView_->yAxis->ticker()->setTickCount(size);
+    auto size = share_->mapSize();
+    simView_->xAxis->setRange(0, size.first);
+    simView_->yAxis->setRange(0, size.second);
+    simView_->xAxis->ticker()->setTickCount(size.first);
+    simView_->yAxis->ticker()->setTickCount(size.second);
 }
 
 void DisplayBase::RobotViz(const QCPScatterStyle &myScatter) const {
     QVector<double> robo_x, robo_y;
     share_->getRobotPos(robo_x, robo_y);
 
+
     // add robot location
-    simView_->addGraph();
-    simView_->graph(0)->setScatterStyle(myScatter);
-    simView_->graph(0)->setData(robo_x, robo_y);
+    simView_->graph(num_layer_)->setScatterStyle(myScatter);
+    simView_->graph(num_layer_)->setData(robo_x, robo_y);
 }
+
 

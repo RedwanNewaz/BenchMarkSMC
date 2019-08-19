@@ -40,6 +40,7 @@ Navigation::Navigation() {
 				"0.9477809139837822 0.6205091684435805 0.3148059529873232 0.05405447818338871\n")
 			+ string("-1 0 0 0\n");
 	istringstream iss(map);
+	share_ = SHARE->getPtr();
 	Init(iss);
 }
 
@@ -292,90 +293,109 @@ ScenarioLowerBound* Navigation::CreateScenarioLowerBound(string name,
 		return NULL;
 	}
 }
-
+//TODO MODIFY HERE
 void Navigation::PrintState(const State& s, ostream& out) const {
+
+
+		static int size_ = xsize_ * ysize_;
+		auto getIndex = [&](int x, int y){ return x+size_*y;};
+		unordered_map<int, int> map;
+
 	char buffer[20];
 	out << "Flag = " << (s.state_id % flag_size_) << endl;
 	for (int y = 0; y < ysize_; y++) {
 		for (int x = 0; x < xsize_; x++) {
 			int pos = y * xsize_ + x;
 			if (pos == goal_pos_) {
-				if ((s.state_id >> flag_bits_) == pos)
+				if ((s.state_id >> flag_bits_) == pos) {
 					out << "T     ";
-				else
+					map[getIndex(x,y)] =1;
+				}
+				else {
 					out << "G     ";
+					map[getIndex(x,y)] = 2;
+				}
 			} else {
-				if ((s.state_id >> flag_bits_) == pos)
+				if ((s.state_id >> flag_bits_) == pos) {
 					out << "R     ";
+					map[getIndex(x,y)] =1;
+				}
 				else {
 					sprintf(buffer, "%4.3f ", trap_prob_[pos]);
 					out << buffer;
+					map[getIndex(x,y)] =3;
 				}
 			}
 		}
 		out << endl;
 	}
-}
 
-void Navigation::PrintBelief(const Belief& belief, ostream& out) const {
-}
 
-void Navigation::PrintObs(const State& state, OBS_TYPE obs,
-	ostream& out) const {
-	out << obs << endl;
-}
-
-void Navigation::PrintAction(ACT_TYPE action, ostream& out) const {
-	out << Compass::CompassString[action] << endl;
-}
-
-State* Navigation::Allocate(int state_id, double weight) const {
-	NavigationState* state = memory_pool_.Allocate();
-	state->state_id = state_id;
-	state->weight = weight;
-	return state;
-}
-
-State* Navigation::Copy(const State* particle) const {
-	NavigationState* state = memory_pool_.Allocate();
-	*state = *static_cast<const NavigationState*>(particle);
-	state->SetAllocated();
-	return state;
-}
-
-void Navigation::Free(State* particle) const {
-	memory_pool_.Free(static_cast<NavigationState*>(particle));
-}
-
-int Navigation::NumActiveParticles() const {
-	return memory_pool_.num_allocated();
-}
-
-void Navigation::ComputeDefaultActions(string type) {
-	cerr << "Default action = " << type << endl;
-	if (type == "MDP") {
-		ComputeOptimalPolicyUsingVI();
-		int num_states = NumStates();
-		default_action_.resize(num_states);
-
-		double value = 0;
-		for (int s = 0; s < num_states; s++) {
-			default_action_[s] = policy_[s].action;
-			value += policy_[s].value;
-		}
-		cerr << "MDP upper bound " << policy_[0].value << endl;
-	} else {
-		cerr << "Unsupported default action type " << type << endl;
-		exit(0);
+		std::call_once(flag_,[&](){share_->map_size = make_pair(xsize_,ysize_);share_->updateSize(size_);} );
+//		share_->map_size = make_pair(xsize_,ysize_);
+//		share_->updateSize(size_);
+		share_->updateMap(map);
 	}
-}
 
-int Navigation::GetAction(const State& state) const {
-	return default_action_[GetIndex(&state)];
-}
+	void Navigation::PrintBelief(const Belief& belief, ostream& out) const {
+	}
 
-double Navigation::Reward(int s, ACT_TYPE action) const {
-	return ((s >> flag_bits_) == goal_pos_) ? 0 : -1;
-}
+	void Navigation::PrintObs(const State& state, OBS_TYPE obs,
+							  ostream& out) const {
+		out << obs << endl;
+	}
+
+	void Navigation::PrintAction(ACT_TYPE action, ostream& out) const {
+		out << Compass::CompassString[action] << endl;
+	}
+
+	State* Navigation::Allocate(int state_id, double weight) const {
+		NavigationState* state = memory_pool_.Allocate();
+		state->state_id = state_id;
+		state->weight = weight;
+		return state;
+	}
+
+	State* Navigation::Copy(const State* particle) const {
+		NavigationState* state = memory_pool_.Allocate();
+		*state = *static_cast<const NavigationState*>(particle);
+		state->SetAllocated();
+		return state;
+	}
+
+	void Navigation::Free(State* particle) const {
+		memory_pool_.Free(static_cast<NavigationState*>(particle));
+	}
+
+	int Navigation::NumActiveParticles() const {
+		return memory_pool_.num_allocated();
+	}
+
+	void Navigation::ComputeDefaultActions(string type) {
+		cerr << "Default action = " << type << endl;
+		if (type == "MDP") {
+			ComputeOptimalPolicyUsingVI();
+			int num_states = NumStates();
+			default_action_.resize(num_states);
+
+			double value = 0;
+			for (int s = 0; s < num_states; s++) {
+				default_action_[s] = policy_[s].action;
+				value += policy_[s].value;
+			}
+			cerr << "MDP upper bound " << policy_[0].value << endl;
+		} else {
+			cerr << "Unsupported default action type " << type << endl;
+			exit(0);
+		}
+	}
+
+	int Navigation::GetAction(const State& state) const {
+		return default_action_[GetIndex(&state)];
+	}
+
+	double Navigation::Reward(int s, ACT_TYPE action) const {
+		return ((s >> flag_bits_) == goal_pos_) ? 0 : -1;
+	}
 
 } // namespace despot

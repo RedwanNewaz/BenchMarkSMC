@@ -24,6 +24,7 @@ public:
 
     bool showSim = false;
     int count_;
+    pair<int,int> map_size;
 
     SharedData(){
         dis_reward_ = 0;
@@ -43,7 +44,7 @@ public:
      * map size is required for visualizing the simulation grid
      * @return grid size is square, need only one parameter
      */
-    int mapSize(){ return size_;}
+    pair<int,int> mapSize(){ return map_size;}
 
     void updateMap(unordered_map<int,int>&map)const{
 

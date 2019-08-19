@@ -17,6 +17,7 @@ Tag::Tag() {
 		+ string("#####...##\n") + string("#####...##\n")
 		+ string("...........\n") + string("...........");
 	istringstream iss(map);
+	share_ = SHARE->getPtr();
 	Init(iss);
 
 	same_loc_obs_ = floor_.NumCells();
@@ -28,6 +29,7 @@ Tag::Tag() {
 		}
 	}
   robot_pos_unknown_ = false;
+
 }
 
 Tag::Tag(string params_file) :
@@ -131,5 +133,60 @@ void Tag::PrintObs(const State& state, OBS_TYPE obs, ostream& out) const {
 		out << "Rob at (" << rob.x << ", " << rob.y << ")" << endl;
 	}
 }
+
+    void Tag::PrintState(const State &state, std::ostream &out) const {
+//        BaseTag::PrintState(state, out);
+
+		static int size_ = floor_.num_rows() * floor_.num_cols();
+		auto getIndex = [&](int x, int y){ return x+size_*y;};
+		unordered_map<int, int> map;
+
+
+
+		const TagState& s = static_cast<const TagState&>(state);
+
+		int aindex = rob_[state.state_id];
+		int oindex = opp_[state.state_id];
+
+		for (int y = floor_.num_rows()-1; y >= 0; y--) {
+			for (int x = 0; x < floor_.num_cols(); x++) {
+				int index = floor_.GetIndex(x, y);
+				if (index == Floor::INVALID)
+				{
+					out << "#";
+					map[getIndex(x,y)] =3;
+				}
+				else if (index == aindex && index == oindex)
+				{
+					out << "Q";
+					map[getIndex(x,y)] = 2;
+				}
+				else if (index == aindex)
+				{
+					out << "R";
+					map[getIndex(x,y)] =1;
+				}
+				else if (index == oindex)
+				{
+					out << "O";
+					map[getIndex(x,y)] = 2;
+				}
+				else
+					out << ".";
+			}
+			out << endl;
+		}
+
+		out <<"\n size: "<<size_<<"\n";
+
+		
+		
+		std::call_once(flag_,[&]() {
+			share_->map_size = make_pair(floor_.num_cols(),floor_.num_rows());
+			share_->updateSize(size_);
+			
+		});
+		share_->updateMap(map);
+	}
 
 } // namespace despot

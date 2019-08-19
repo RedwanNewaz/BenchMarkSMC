@@ -2,10 +2,15 @@
 #define NAVIGATION_H
 
 #include "navigation.h"
+#include "SharedData.h"
 #include <despot/interface/pomdp.h>
 #include <despot/core/mdp.h>
 #include <despot/util/coord.h>
+#include <unordered_map>
 
+
+extern std::shared_ptr<SharedData>SHARE;
+static std::once_flag flag_;
 namespace despot {
 
 /* ==============================================================================
@@ -101,6 +106,11 @@ public:
 
 	void ComputeDefaultActions(std::string type);
 	int GetAction(const State& navistate) const;
+
+private:
+	std::shared_ptr<SharedData>share_;
+
+
 };
 
 } // namespace despot
